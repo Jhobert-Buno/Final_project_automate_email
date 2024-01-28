@@ -14,3 +14,39 @@ email_server = "smtp.gmail.com"
 current_dir = Path(__file__).resolve().parent if "__file__" in locals() else Path.cwd()
 envars = current_dir / ".env"
 load_dotenv(envars)
+
+#read environment variables
+sender_email = os.getenv("email")
+password_email = os.getenv("password")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
