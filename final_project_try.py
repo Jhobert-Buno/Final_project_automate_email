@@ -55,4 +55,17 @@ def send_email(subject, receiver_email, name, due_date, invoice_no, amount):
         subtype="html"
     )
 
-   
+    with smtplib.SMTP(email_server, port) as server:
+        server.starttls()
+        server.login(sender_email, password_email)
+        server.sendmail(sender_email, receiver_email, message.as_string())
+
+if __name__ == "__main__":
+    send_email(
+        subject="Invoice Reminder",
+        name="Jhobert Buño",
+        receiver_email="jobertbuno02@gmail.com",
+        due_date="11, August 2023",
+        invoice_no="INV-21-12-009",
+        amount="5",
+    )
