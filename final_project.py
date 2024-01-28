@@ -28,3 +28,8 @@ def query_data_and_send_emails(df):
             )
             email_counter += 1
     return f"Total Emails Sent: {email_counter}"
+
+# run the code
+df = load_df(URL)
+result = query_data_and_send_emails(df)
+print(result)
